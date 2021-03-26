@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap");
 
 body {
-  font-family: "Roboto Condensed" sans-serif ;
-}
-.logo{
-  width: 10.25rem;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
+.logo {
+  width: 10.25rem;
+}
+nav {
+  z-index: 2;
+}
 nav a.nav-link {
   font-weight: 500;
   letter-spacing: 0.0375rem;
@@ -18,24 +21,77 @@ nav ul li {
 }
 
 .navbar-nav > li > a {
-  color: white  !important;
+  color: white !important;
   margin-right: 0.75rem;
   margin-left: 0.75rem;
-  border-top: 0.1875rem solid  rgba(255,255,255,0);
+  border-top: 0.1875rem solid rgba(255, 255, 255, 0);
 }
 
 .navbar-brand {
   max-width: 17.25rem;
-  padding:  0 !important;
+  padding: 0 !important;
   height: 6rem !important;
   margin-top: 0.5rem;
 }
 
-.navbar-nav > li > a.active ,.navbar-nav > li > a.active:focus
-{
- border-top: 0.1875rem solid orange ;
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus {
+  border-top: 0.1875rem solid orange;
 }
 
 .navbar-nav > li > a:hover {
-  border-top: 0.1875rem solid orange ;
+  border-top: 0.1875rem solid orange;
+}
+
+.header {
+  position: relative;
+  background: url(photo-1579546929662-711aa81148cf.jfif) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  z-index: 1;
+}
+
+.typed-text {
+  font-size: 2rem;
+  color: black;
+}
+
+.btn-main {
+  border: 1px solid red;
+  text-transform: uppercase;
+  border-radius: 10;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: black;
+  margin: 2rem;
+}
+.btn-main:hover {
+  text-decoration: none; /**no word in this **/
+  background-color: orangered;
+}
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vm;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .typed-text {
+    font-size: 0.5rem !important;
+  }
 }
